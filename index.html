@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>B&W love</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/960.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+</head>
+<body>
+<div class="container_20"> <img class="image" src="img/light.jpg" alt=""/></div>
+<div class="container_12">
+    <div class="grid_12" id="hello">
+       <h1>Daniel Bengtsson</h1>
+    </div>
+</div>
+
+<div class="container_12">
+    <div class="grid_12" id="motto">
+    <div class="grid_8">The whole history of science has been the gradual realization that events do not happen in an arbitrary manner, but that they reflect a certain underlying order, which may or may not be divinely inspired.
+    </div></div>
+</div>
+
+<!--Menu--> 
+
+<div class="container_12">
+    <div class="grid_12" id="menu">
+       <ul>
+	 <div class="grid_3"><li><a href="#">Home</a></li></div>
+	 <div class="grid_3"><li><a href="#">About me</a></li></div>
+	 <div class="grid_3"><li><a href="#">Links</a></li></div>
+	 <div class="grid_3"><li><a href="#">Other</a></li></div>
+</ul>
+    </div>
+</div>
+<!--End menu-->
+
+<!--Home-->
+
+<div class="container_12">
+    <div class="grid_12" id="home">
+    <p id="daniel">   Welcome to my page. My name is Björn Daniel Bengtsson.</p>
+	<p> Born in Västervik Sweden. Moved to Norway in 1999.
+	Currently I work in Opera Software ASA as programmer.</p>
+	   
+	<p>Some links related to me:</p>
+   
+	   
+    </div>
+</div>
+
+<!--Home end-->
+
+<!--Footer-->
+
+<div class="container_12">
+    <div class="grid_12" id="footer">
+    Copyright © 2011, Anastasia Bengtsson | This page is never under construction (it's always finished)| I <3 Validator
+
+
+	   
+    </div>
+</div>
+
+<!--Footer end-->
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("img#portfolio").hover(
+                function () {
+                    $(this).attr("src", "img/1-color.jpg");
+                },
+                function () {
+                    $(this).attr("src", "img/1-gray.jpg");
+                }
+                );
+
+        $("img#works").hover(
+                function () {
+                    $(this).attr("src", "img/2-color.jpg");
+                },
+                function () {
+                    $(this).attr("src", "img/2-gray.jpg");
+                }
+                );
+$("img#contacts").hover(
+                function () {
+                    $(this).attr("src", "img/3-color.jpg");
+                },
+                function () {
+                    $(this).attr("src", "img/3-gray.jpg");
+                }
+                );
+
+    });
+</script>
+</body>
+</html>
