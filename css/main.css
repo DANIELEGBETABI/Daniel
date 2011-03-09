@@ -210,11 +210,11 @@ div.grid_3 {                        /*Used for the main menu*/
 img.danielimg {
 border:1px solid #363530;
 float:left;
-margin:5px 20px 10px 20px;
+margin:15px 18px 0px 20px;
 }
 
 #about {
-margin:5px 40px 20px 20px;
+margin:2px 40px 20px 20px;
 line-height:150%;
 }
 
@@ -230,7 +230,7 @@ line-height:150%;
 img.avaimg {
 border:1px solid #363530;
 float:left;
-margin:5px 20px 10px 20px;
+margin:15px 18px 0px 20px;
 }
 
 #aboutava {
