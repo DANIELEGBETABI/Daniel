@@ -115,6 +115,11 @@ li {
 	font-size:20px;
 }
 
+div.homelinks {
+height:180px;
+}
+
+
 div.grid_6 {                      /*Motto is using grid_6*/
 	margin-left:50%;
 } 
