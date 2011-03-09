@@ -98,17 +98,14 @@
                         				
                                         // add the item to the page
                                         var h2 = document.createElement('h2');
-										//h2.className = "blog";
-                                        var a = document.createElement('a');
-										//a.className = "blog";
+										var a = document.createElement('a');
                                         a.setAttribute('href', link);
                                         a.setAttribute('target', '_blank');
                                         h2.appendChild(a);
                                         a.innerHTML = title;
                                         document.getElementById('rss-items').appendChild(h2);
                                         var p = document.createElement('p');
-										//p.className = "blog";
-                                        p.innerHTML = description;
+                                        p.innerHTML = description.substr(0,372);
                                         document.getElementById('rss-items').appendChild(p);
                                 }
                         })
