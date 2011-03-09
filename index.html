@@ -36,7 +36,7 @@
 
 										// retrieve title, link, desc from the item
                                         var title = items[i].getElementsByTagName('title')[0].firstChild.nodeValue;
-                                        var link = items[i].getElementsByTagName('link')[0].href;
+                                        var link = items[i].getElementsByTagName('id')[0].firstChild.nodeValue;
                                         var description = items[i].getElementsByTagName('content')[0].firstChild.nodeValue;
                         				
                                         // add the item to the page
