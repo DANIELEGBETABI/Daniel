@@ -29,11 +29,7 @@
                                 var items = xml.getElementsByTagName('entry');
                                 
                                 for (var i = 0; i < 3; i++) {
-                                
-										var subitems = items[i].getElementsByTagName("p");
-										for( var j = 0; j < subitems.length; j++ )
-											subitems[j].className = "blog";
-
+									
 										// retrieve title, link, desc from the item
                                         var title = items[i].getElementsByTagName('title')[0].firstChild.nodeValue;
                                         var link = items[i].getElementsByTagName('id')[0].firstChild.nodeValue;
@@ -48,8 +44,11 @@
                                         a.innerHTML = title;
                                         document.getElementById('rss-items').appendChild(h3);
                                         var p = document.createElement('p');
-                                        p.innerHTML = description.substr(0,372) + "...";
-                                        document.getElementById('rss-items').appendChild(p);
+										
+										// a bit hackish
+										// any p in the blogpost is put into the blog class
+										// and we shorten the length by cutting at a fixed length
+                                        p.innerHTML = description.substr(0,372).replace(/<p>/g,"<p class=\"blog\">") + "...";
 										
 										h3.className = "blog";
 										a.className = "blog";
