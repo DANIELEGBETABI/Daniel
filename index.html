@@ -40,18 +40,18 @@
                                         var description = items[i].getElementsByTagName('content')[0].firstChild.nodeValue;
                         				
                                         // add the item to the page
-                                        var h2 = document.createElement('h2');
+                                        var h3 = document.createElement('h3');
 										var a = document.createElement('a');
                                         a.setAttribute('href', link);
                                         a.setAttribute('target', '_blank');
-                                        h2.appendChild(a);
+                                        h3.appendChild(a);
                                         a.innerHTML = title;
-                                        document.getElementById('rss-items').appendChild(h2);
+                                        document.getElementById('rss-items').appendChild(h3);
                                         var p = document.createElement('p');
                                         p.innerHTML = description.substr(0,372) + "...";
                                         document.getElementById('rss-items').appendChild(p);
 										
-										h2.className = "blog";
+										h3.className = "blog";
 										a.className = "blog";
 										p.className = "blog";
                                 }
