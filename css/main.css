@@ -12,7 +12,7 @@ body, html {
     background: url('../img/bg.jpg');
 }
 
-p {
+p.standard {
     margin: 0 0 15px 0;
     line-height: 60%;
 	color:#7a7a7a;
@@ -136,20 +136,20 @@ div.grid_8 {                      /*Grid for the latest posts*/
 
 }
 
-#blog {                          /*Style for blog posts*/
+.blog {                          /*Style for blog posts*/
 	font:Arial;
 	font-size:10px;
 	color:white;
 	line-height:140%;
 }
 
-#blog h2 {                        /*Style for Latest posts header*/
+h2.blog  {                        /*Style for Latest posts header*/
 	font-size:18px;
 	margin:15px 5px 10px 0px;
 	color:#d0d0ce;
 }
 
-#blog h3 {						/*Style for blog headers*/
+h3.blog {						/*Style for blog headers*/
 	font-size:16px;
 	margin:5px 5px 10px 0px;
 	color:#bfb9a0;
