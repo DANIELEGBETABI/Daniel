@@ -205,15 +205,15 @@ div.grid_3 {                        /*Used for the main menu*/
 /*end menu*/
 
 
-/*ABOUT ME*/
+/*ABOUT ME - Daniel*/
 
-img.danielimg {
+img.danielimg {              /*Style for photo*/
 border:1px solid #363530;
 float:left;
 margin:15px 18px 0px 20px;
 }
 
-#about {
+#about {                    /*Style for text*/
 margin:2px 40px 20px 20px;
 line-height:150%;
 }
