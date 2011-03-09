@@ -132,7 +132,7 @@ div.grid_8 {                      /*Grid for the latest posts*/
 	margin:10px 0 0 40px;
 	height:300px;
 	border-top:1px solid #1f1f1f;
-	padding:15px 0 0 10px;
+	padding:20px 0 0 10px;
 
 }
 
@@ -141,21 +141,31 @@ div.grid_8 {                      /*Grid for the latest posts*/
 	font-size:10px;
 	color:white;
 	line-height:140%;
+	margin:10px 0 10px 0;
 }
 
+
 h2.blog  {                        /*Style for Latest posts header*/
-	font-size:18px;
-	margin:15px 5px 10px 0px;
+	font-size:20px;
+	margin:10px 5px 5px 0px;
 	color:#d0d0ce;
 }
 
 h3.blog {						/*Style for blog headers*/
 	font-size:16px;
-	margin:5px 5px 10px 0px;
+	margin:0px 5px 0px 0px;
 	color:#bfb9a0;
 	font-style:italic;
 
 }
+
+a.blog {
+	font-size:16px;
+	margin:15px 5px 15px 0px;
+	color:#bfb9a0;
+	font-style:italic;
+	}
+
 #footer {					   /* Style for footer*/
 	padding:5px 20px 2px 25px;
 	color:#434343;
