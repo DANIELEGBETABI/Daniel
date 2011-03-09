@@ -50,6 +50,8 @@
 										// and we shorten the length by cutting at a fixed length
                                         p.innerHTML = description.substr(0,372).replace(/<p>/g,"<p class=\"blog\">") + "...";
 										
+                                        document.getElementById('rss-items').appendChild(p);
+										
 										h3.className = "blog";
 										a.className = "blog";
 										p.className = "blog";
