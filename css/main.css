@@ -1,6 +1,6 @@
 /*
 *********************************************************************
-* Общие стили
+* Main CSS
 *********************************************************************
 */
 
@@ -14,18 +14,18 @@ body, html {
 
 p {
     margin: 0 0 15px 0;
-    line-height: 180%;
+    line-height: 60%;
 	color:#7a7a7a;
 	font-size:14px;
 	font-family:Georgia;
 }
 
-div.container_20 {
+div.container_20 {   /*****Main content****/
 z-index:2;
 position:absolute;
 } 
 
-div.container_12 {
+div.container_12 {   /*****Light bg****/
 z-index:5;
 position:relative;
 } 
@@ -39,8 +39,7 @@ h1, h2, h3 {
 h1 {
     text-align: center;
     font-size: 50px;
-	
-}
+	}
 
 h2 {
     font-size: 20px;
@@ -55,14 +54,22 @@ h6 {
     text-align: center;
 }
 
+#otherlinks {       /*Style for Some links related to me*/
+	font-style:italic;
+	font:Georgia;
+	font-size:14px;
+}
+
+
 a {
     text-decoration: none;
-    color: #0000CC;
-    
+    color:#bfb9a0;
+	font:Georgia;
+     
 }
 
 a:hover {
-    color: black;
+    color:#bab8af;
     border-bottom-color: black;
 }
 
@@ -74,104 +81,105 @@ ul {
 
 li {
     list-style: none;
-    margin: 0 0 10px 0;
+    margin: 0 0 2px 0;
+	
 }
 
-blockquote {
-
-    margin: 5px 0 10px 30px;
-    padding-left: 10px;
-    border-left: 2px solid black;
-}
-
-div.hello {
-    margin-bottom: 15px;
+#hello{                 /*Style for h1 Daniel Bengtsson*/
+	margin:3% 0 5px 30%;
+	color:#bfb9a0;
 
 }
 
-div.menu {
-    height: 100px;
-	margin-bottom:20px;
-}
-
-div.menu img {
-    cursor: pointer;
-}
-
-.caption {
-    padding-left: 5px;
-    position: absolute;
-    top: 250px;
-    font-size: 25px;
-    color: black;
-    background: #cccccc;
-
-    height: 50px;
-    width: 298px;
-    opacity: 0.6;
-}
-
-
-#hello{
-margin-left:30%;
-margin-top:3%;
-margin-bottom:5px;
-color:#d0cec4;
+#motto {                /*Style for motto at the top*/
+	margin:0 0 25px 0;
+	padding: 0 20px 0 0;
+	color:#626262;
+	text-align:right;
+	font-style:italic;
+	font-size:12px;
 
 }
 
-#motto {
-margin:0 0 25px 0;
-padding-right:20px;
-color:#626262;
-text-align:right;
-font-style:italic;
-font-size:12px;
-
+#home {                           /*Style for main content*/
+	margin:20px 0 10px 0;
+	padding:0 0px 10px 40px;
+	color:#c6c6c6;
+	height:570px;
+	border-bottom:1px solid #1f1f1f;
 }
 
-#home {
-margin:20px 0 10px 0;
-padding:0 0px 10px 30px;
-color:#c6c6c6;
-height:580px;
-border-bottom:1px solid #1f1f1f;
+#daniel {                         /*Style for «My name is DB»*/
+	color:#d0d0ce;
+	font-family:"Adobe Garamond Pro";
+	font-size:20px;
 }
 
-#daniel {
-color:#67a7a7a;
-font-family:Cambria;
-font-size:16px;
-}
-
-div.grid_8 {
-margin-left:35%;
+div.grid_6 {                      /*Motto is using grid_6*/
+	margin-left:50%;
 } 
 
-#footer {
-padding:5px 20px 2px 25px;
-color:#434343;
-font-size:10px;
+
+
+div.grid_8 {                      /*Grid for the latest posts*/
+	border-top:1px solid #1f1f1f;
+	margin:10px 0 0 0;
+	height:300px;
+	padding:0 10px 10px 10px;
+} 
+
+#flickr {                        /*Style for the bw image and link to flickr*/
+	margin:10px 0 0 40px;
+	height:300px;
+	border-top:1px solid #1f1f1f;
+	padding:15px 0 0 10px;
+
+}
+
+#blog {                          /*Style for blog posts*/
+	font:Arial;
+	font-size:10px;
+	color:white;
+	line-height:140%;
+}
+
+#blog h2 {                        /*Style for Latest posts header*/
+	font-size:18px;
+	margin:15px 5px 10px 0px;
+	color:#d0d0ce;
+}
+
+#blog h3 {						/*Style for blog headers*/
+	font-size:16px;
+	margin:5px 5px 10px 0px;
+	color:#bfb9a0;
+	font-style:italic;
+
+}
+#footer {					   /* Style for footer*/
+	padding:5px 20px 2px 25px;
+	color:#434343;
+	font-size:10px;
+	height:60px;
 } 
 /*Main Menu*/
 
-ul {
+#menu ul {
 	list-style:none;
 	margin:0;
 	padding:0;
 	
 }
-li {
+#menu li {
 	float:left;
 	width:200px;
 	margin:0;
 	padding:0;
 	text-align:center;
 	border-bottom:1px solid #282828;
-	border-top:1px solid #151515;
 	text-align:left;
 }
-li a {
+#menu li a {
 	display:block;
 	padding:5px 10px;
 	height:80%;
@@ -181,12 +189,12 @@ li a {
 	
 }
 
-li a:hover {
+#menu li a:hover {
 	color:#bab8af;
-	border-bottom:2px solid #4b4949;
+	border-bottom:2px solid #bfb9a0;
 }
 
-div.grid_3 {
+div.grid_3 {                        /*Used for the main menu*/
 	margin-right:-10px;
 	margin-left:25px;
 	font-family:"Browallia New";
@@ -196,3 +204,41 @@ div.grid_3 {
 }
 /*end menu*/
 
+
+/*ABOUT ME*/
+
+img.danielimg {
+border:1px solid #363530;
+float:left;
+margin:5px 20px 10px 20px;
+}
+
+#about {
+margin:5px 40px 20px 20px;
+line-height:150%;
+}
+
+
+
+
+
+
+
+
+/*ANASTASIA*/
+
+img.avaimg {
+border:1px solid #363530;
+float:left;
+margin:5px 20px 10px 20px;
+}
+
+#aboutava {
+margin:5px 40px 20px 20px;
+line-height:150%;
+}
+
+#anastasia_web {
+margin:0 0 5px 0;
+font-size:14px;
+}
