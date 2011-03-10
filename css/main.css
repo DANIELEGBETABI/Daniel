@@ -137,7 +137,7 @@ div.grid_8 {                      /*Grid for the latest posts*/
 	margin:10px 0 0 40px;
 	height:300px;
 	border-top:1px solid #1f1f1f;
-	padding:20px 0 0 10px;
+	padding:30px 0 0 10px;
 
 }
 
@@ -152,7 +152,7 @@ div.grid_8 {                      /*Grid for the latest posts*/
 
 h2.blog  {                        /*Style for Latest posts header*/
 	font-size:20px;
-	margin:10px 5px 5px 0px;
+	margin:25px 5px 5px 0px;
 	color:#d0d0ce;
 }
 
@@ -225,22 +225,41 @@ div.grid_3 {                        /*Used for the main menu*/
 img.danielimg {              /*Style for photo*/
 border:1px solid #363530;
 float:left;
-margin:15px 18px 0px 20px;
+margin:15px 18px 20px 5px;
 }
 
 #about {                    /*Style for text*/
-margin:2px 40px 20px 20px;
+margin:5px 5px 20px 0px;
 line-height:150%;
+border:none;
 }
 
+#contact {
+border:none;
+}
 
+div.infocontact {                         /*Layer for Contact info*/
+margin:20px 18px 0px 10px;
+}
 
+h2.contact {                             /*Style for «Contact info»*/
+font-size:16px;
+color:#bfb9a0;
+border-bottom:1px solid #272623;
+}
 
+h3.contact {								/*Style for Main contact titles*/
+font-size:14px;
+color:#bfb9a0;
+font:italic;
+margin:0;
+padding:0;
+line-height:90%;
+}
 
+/******ABOUT ME - Daniel END************/
 
-
-
-/*ANASTASIA*/
+/*************ANASTASIA*******************/
 
 img.avaimg {
 border:1px solid #363530;
@@ -257,3 +276,4 @@ line-height:150%;
 margin:0 0 5px 0;
 font-size:14px;
 }
+
