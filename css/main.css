@@ -141,6 +141,11 @@ div.grid_8 {                      /*Grid for the latest posts*/
 
 }
 
+img.flickr {
+border:1px solid #363530;
+}
+
+
 .blog {                          /*Style for blog posts*/
 	font:Arial;
 	font-size:10px;
