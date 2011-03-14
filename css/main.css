@@ -18,6 +18,7 @@ p {
 	color:#7a7a7a;
 	font-size:14px;
 	font-family:Georgia;
+	
 }
 
 div.container_20 {   /*****Main content****/
@@ -162,6 +163,7 @@ border:1px solid #363530;
 	color:white;
 	line-height:140%;
 	margin:10px 0 10px 0;
+
 }
 
 
@@ -249,11 +251,19 @@ float:left;
 margin:15px 18px 20px 5px;
 }
 
-.about {                    /*Style for text*/
+#about {                    /*Style for text*/
+margin:5px 5px 20px 0px;
+line-height:150%;
+border:none;
+
+}
+
+#validator_sucks {                    /*Style for text*/
 margin:5px 5px 20px 0px;
 line-height:150%;
 border:none;
 }
+
 
 #contact {
 border:none;
