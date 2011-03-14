@@ -280,12 +280,12 @@ border-bottom:1px solid #272623;
 }
 
 h3.contact {								/*Style for Main contact titles*/
-font-size:14px;
+font-size:16px;
 color:#bfb9a0;
 font:italic;
 margin:0;
 padding:0;
-line-height:90%;
+line-height:150%;
 }
 
 /******ABOUT ME - Daniel END************/
