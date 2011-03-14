@@ -249,7 +249,7 @@ float:left;
 margin:15px 18px 20px 5px;
 }
 
-#about {                    /*Style for text*/
+.about {                    /*Style for text*/
 margin:5px 5px 20px 0px;
 line-height:150%;
 border:none;
