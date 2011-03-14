@@ -56,6 +56,9 @@
 										a.className = "blog";
 										p.className = "blog";
                                 }
+
+                                var loading = document.getElementById('blog_loading');
+                                loading.style.visibility = 'hidden';
                         })
                 });
 				
@@ -117,7 +120,7 @@
 	<h2 class="blog">My latest posts <a type="application/rss+xml" href="http://www.bengtssons.info/daniel/blog/xmlsrv/atom.php?blog=5"> <img src="img/rss.png" alt="rss"></a></h2>
 
 	<h3 class="blog" id="rss-title"></h3>
-	<div class="blog" id="rss-items"></div>
+	<div class="blog" id="rss-items"><div id="blog_loading"><img src="img/loading.gif" alt="loading"></div></div>
 	
 	</div>
 	
