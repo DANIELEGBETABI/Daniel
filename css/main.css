@@ -99,7 +99,7 @@ li {
 #hello{                 /*Style for h1 Daniel Bengtsson*/
 	color:#bfb9a0;
 	text-align:right;
-	margin-top:10px;
+	margin-top:5px;
 }
 
 #motto {                /*Style for motto at the top*/
@@ -110,7 +110,7 @@ li {
 }
 
 #home {                           /*Style for main content*/
-	margin:40px 0 20px 0;
+	margin:30px 0 20px 0;
 	padding:0 0px 10px 40px;
 	color:#c6c6c6;
 	height:570px;
@@ -182,7 +182,7 @@ a.blog {
 	padding:1px 20px 2px 45px;
 	color:#434343;
 	font-size:10px;
-	height:30px;
+	height:20px;
 	text-align: center;
 	margin:-10px;
 } 
