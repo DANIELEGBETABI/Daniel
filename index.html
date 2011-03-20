@@ -14,11 +14,22 @@
 	
 	<script type="text/javascript">
 		// create an instance of RSSClient
+
+ 
          var client = new RSSClient();
                 
                 // make sure the RSSClient is loaded
                 client.onload(function() {
                         
+                    var item = sessionStorage.getItem("rss");
+                    if(item) { 
+                        document.getElementById('rss-items').innerHTML = item; 
+                        var loading = document.getElementById('blog_loading');
+                        loading.style.visibility = 'hidden';
+                    }
+                    else
+                    {
+
                         // url of rss feed
                         var url = 'http://www.bengtssons.info/daniel/blog/xmlsrv/atom.php?blog=5';
                         
@@ -57,11 +68,14 @@
 										p.className = "blog";
                                 }
 
+                                sessionStorage.setItem("rss", document.getElementById('rss-items').innerHTML);
+
                                 var loading = document.getElementById('blog_loading');
                                 loading.style.visibility = 'hidden';
                         })
+                    }
+
                 });
-				
 
 		</script>
 	
