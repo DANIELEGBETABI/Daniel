@@ -99,7 +99,7 @@ li {
 #hello{                 /*Style for h1 Daniel Bengtsson*/
 	color:#bfb9a0;
 	text-align:right;
-	margin-top:5px;
+	margin-top:0px;
 }
 
 #motto {                /*Style for motto at the top*/
@@ -113,7 +113,7 @@ li {
 	margin:30px 0 20px 0;
 	padding:0 0px 10px 40px;
 	color:#c6c6c6;
-	height:570px;
+	height:565px;
 	border-bottom:1px solid #1f1f1f;
 }
 
@@ -129,13 +129,13 @@ height:180px;
 
 div.grid_8 {                      /*Grid for the latest posts*/
 	border-top:1px solid #1f1f1f;
-	margin:30px 0 0 0;
+	margin:25px 0 0 0;
 	height:300px;
-	padding:0 10px 10px 10px;
+	padding:0 10px 2px 10px;
 } 
 
 #flickr {                        /*Style for the bw image and link to flickr*/
-	margin:30px 0 0 40px;
+	margin:25px 0 0 40px;
 	height:300px;
 	border-top:1px solid #1f1f1f;
 	padding:30px 0 0 10px;
