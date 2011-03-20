@@ -28,7 +28,7 @@
 
                     // We reload cache after one hour
                     if(rss && rss_time && last_check < 1000*60*60) { 
-                        document.getElementById('rss-items').innerHTML = rss; 
+                        document.getElementById('rss-items').innerHTML = unescape(rss); 
                         var loading = document.getElementById('blog_loading');
                         loading.style.visibility = 'hidden';
                     }
@@ -47,39 +47,37 @@
                                 for (var i = 0; i < 3; i++) {
 									
 										// retrieve title, link, desc from the item
-                                        var title = items[i].getElementsByTagName('title')[0].firstChild.nodeValue;
-                                        var link = items[i].getElementsByTagName('id')[0].firstChild.nodeValue;
+                                        var title_elm = items[i].getElementsByTagName('title')[0].firstChild.nodeValue;
+                                        var link_elm = items[i].getElementsByTagName('id')[0].firstChild.nodeValue;
                                         var description = items[i].getElementsByTagName('content')[0].firstChild.nodeValue;
                         				
                                         // add the item to the page
-                                        var h3 = document.createElement('h3');
-										var a = document.createElement('a');
-                                        a.setAttribute('href', link);
-                                        a.setAttribute('target', '_blank');
-                                        h3.appendChild(a);
-                                        a.innerHTML = title;
-                                        document.getElementById('rss-items').appendChild(h3);
-                                        var p = document.createElement('p');
+                                        var h3_elm = document.createElement('h3');
+										var a_elm = document.createElement('a');
+                                        a_elm.setAttribute('href', link_elm);
+                                        a_elm.setAttribute('target', '_blank');
+                                        h3_elm.appendChild(a_elm);
+                                        a_elm.innerHTML = title_elm;
+                                        document.getElementById('rss-items').appendChild(h3_elm);
+                                        var p_elm = document.createElement('p');
 										
-										// a bit hackish
-										// any p in the blogpost is put into the blog class
-										// and we shorten the length by cutting at a fixed length
-                                        
-                                        // p.innerHTML = start.replace(/<p>/g,"<p class=\"blog\">") + "...";
+										// p.innerHTML = start.replace(/<p>/g,"<p class=\"blog\">") + "...";
                                         // IE did not like invalid code inside innerHTML so
                                         // forcefully removing all tags before putting it inside.
-                                        p.innerHTML = description.substr(0,372).replace(/<.*>/g,"") + "...";
+                                        // Now we are escaping though, but still lets remove tags so we
+                                        // are not left with unclosed tags.
+                                        p_elm.innerHTML = description.substr(0,237).replace(/<.*>/g,"") + "...";
                                         										
-                                        document.getElementById('rss-items').appendChild(p);
+                                        document.getElementById('rss-items').appendChild(p_elm);
 										
-										h3.className = "blog";
-										a.className = "blog";
-										p.className = "blog";
+										h3_elm.className = "blog";
+										a_elm.className = "blog";
+										p_elm.className = "blog";
                                 }
 
                                 if( sessionStorage )
                                 {
-                                    sessionStorage.setItem("rss", document.getElementById('rss-items').innerHTML);
+                                    sessionStorage.setItem("rss", escape(document.getElementById('rss-items').innerHTML) );
                                     var d = new Date();
                                     sessionStorage.setItem("rss-time", d.getTime());
                                 }
