@@ -20,9 +20,9 @@
                 
                 // make sure the RSSClient is loaded
                 client.onload(function() {
-                        
-                    var rss = sessionStorage.getItem("rss");
-                    var rss_time = sessionStorage.getItem("rss-time");
+                    
+                    var rss = sessionStorage ? sessionStorage.getItem("rss") : 0;
+                    var rss_time = sessionStorage ? sessionStorage.getItem("rss-time") : 0;
                     var date = new Date();
                     var last_check = date.getTime() - rss_time;
 
@@ -64,8 +64,12 @@
 										// a bit hackish
 										// any p in the blogpost is put into the blog class
 										// and we shorten the length by cutting at a fixed length
-                                        p.innerHTML = description.substr(0,372).replace(/<p>/g,"<p class=\"blog\">") + "...";
-										
+                                        
+                                        // p.innerHTML = start.replace(/<p>/g,"<p class=\"blog\">") + "...";
+                                        // IE did not like invalid code inside innerHTML so
+                                        // forcefully removing all tags before putting it inside.
+                                        p.innerHTML = description.substr(0,372).replace(/<.*>/g,"") + "...";
+                                        										
                                         document.getElementById('rss-items').appendChild(p);
 										
 										h3.className = "blog";
@@ -73,9 +77,12 @@
 										p.className = "blog";
                                 }
 
-                                sessionStorage.setItem("rss", document.getElementById('rss-items').innerHTML);
-                                var d = new Date();
-                                sessionStorage.setItem("rss-time", d.getTime());
+                                if( sessionStorage )
+                                {
+                                    sessionStorage.setItem("rss", document.getElementById('rss-items').innerHTML);
+                                    var d = new Date();
+                                    sessionStorage.setItem("rss-time", d.getTime());
+                                }
 
                                 var loading = document.getElementById('blog_loading');
                                 loading.style.visibility = 'hidden';
