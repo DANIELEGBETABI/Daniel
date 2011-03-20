@@ -21,9 +21,14 @@
                 // make sure the RSSClient is loaded
                 client.onload(function() {
                         
-                    var item = sessionStorage.getItem("rss");
-                    if(item) { 
-                        document.getElementById('rss-items').innerHTML = item; 
+                    var rss = sessionStorage.getItem("rss");
+                    var rss_time = sessionStorage.getItem("rss-time");
+                    var date = new Date();
+                    var last_check = date.getTime() - rss_time;
+
+                    // We reload cache after one hour
+                    if(rss && rss_time && last_check < 1000*60*60) { 
+                        document.getElementById('rss-items').innerHTML = rss; 
                         var loading = document.getElementById('blog_loading');
                         loading.style.visibility = 'hidden';
                     }
@@ -69,6 +74,8 @@
                                 }
 
                                 sessionStorage.setItem("rss", document.getElementById('rss-items').innerHTML);
+                                var d = new Date();
+                                sessionStorage.setItem("rss-time", d.getTime());
 
                                 var loading = document.getElementById('blog_loading');
                                 loading.style.visibility = 'hidden';
