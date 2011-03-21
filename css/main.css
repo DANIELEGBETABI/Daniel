@@ -156,6 +156,7 @@ border:1px solid #363530;
 
 }
 
+p.blog:hover { background-color:#363530; }
 
 h2.blog  {                        /*Style for Latest posts header*/
 	font-size:20px;
